@@ -20,7 +20,7 @@ SELECT * FROM MOVIES;
 
 
 -- 2. Retrieving all the attributes from 'MOVIES' table based on 'lead_actor'
-SELECT movie_name,lead_actor,actress,year_of_release,director_name FROM MOVIES WHERE lead_actor='Shang-Chi';
+SELECT movie_name,lead_actor,actress,year_of_release,director_name FROM MOVIES WHERE lead_actor='Simu Liu';
 
 
 -- 3. Retrieving 'movies_name' from 'MOVIES' table based on 'lead_actor','actress','year_of_release'
