@@ -1,0 +1,35 @@
+CREATE TABLE MOVIES(
+    movie_name VARCHAR(50),
+    lead_actor VARCHAR(50),
+    actress VARCHAR(50),
+   director_name VARCHAR(50),
+   year_of_release INT(4)
+);
+
+
+-- Inserting the values into 'MOVIES' table
+INSERT INTO MOVIES VALUES('Shang-Chi and the Legend of the Ten Rings','Simu Liu','Awkwafina','Destin Daniel Cretton',2021)
+INSERT INTO MOVIES VALUES('Dune','Timothée Chalamet','Rebecca Ferguson','Denis Villeneuve',2021)
+INSERT INTO MOVIES VALUES('Spider-Man: Homecoming','Tom Holland','Zendaya','Jon Watts',2017)
+INSERT INTO MOVIES VALUES('Spider-Man: Far From Home','Tom Holland','Zendaya','Jon Watts',2019)
+INSERT INTO MOVIES VALUES('Spider-Man: No Way Home','Tom Holland','Zendaya','Jon Watts',2021)
+
+
+-- 1. Retrieving all the attributes from 'MOVIES' table
+SELECT * FROM MOVIES;
+
+
+-- 2. Retrieving all the attributes from 'MOVIES' table based on 'lead_actor'
+SELECT movie_name,lead_actor,actress,year_of_release,director_name FROM MOVIES WHERE lead_actor='Shang-Chi';
+
+
+-- 3. Retrieving 'movies_name' from 'MOVIES' table based on 'lead_actor','actress','year_of_release'
+SELECT movie_name FROM MOVIES WHERE lead_actor='Tom Holland' AND actress='Zendaya' AND year_of_release=2021;
+
+
+-- 4. Retrieving all the attributes from 'MOVIES' table whose 'year_of_release' between 2017,2020
+SELECT movie_name,lead_actor,actress,year_of_release,director_name FROM MOVIES WHERE year_of_release BETWEEN 2017 AND 2020;
+
+
+-- 5. Retrieving all the 'movie_name','director_name' from 'MOVIES' table that are not directed by 'Jon Watts'
+SELECT movie_name,director_name FROM MOVIES WHERE director_name!='Jon Watts';
